@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="public/styles/main.css" />
+  </head>
+  <body>
+    <h1>CHESSBOT♚</h1>
+    <ul id="historico-de-mensagens">
+      {% for mensagem in historico_de_mensagens %}
+      <li><strong>Você:</strong> {{ mensagem.usuario }}</li>
+      <li><strong>Bot:</strong> {{ mensagem.bot }}</li>
+      {% endfor %}
+    </ul>
+    <form id="form-mensagem">
+      <input type="text" id="mensagem" placeholder="Digite sua mensagem" />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const historicoMensagens = document.getElementById(
+          "historico-de-mensagens"
+        );
+        historicoMensagens.scrollTop = historicoMensagens.scrollHeight;
+
+        const formMensagem = document.getElementById("form-mensagem");
+        formMensagem.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const mensagem = document.getElementById("mensagem").value;
+
+          fetch("/dialogflow", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              mensagem: mensagem,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              historicoMensagens.innerHTML += `
+        <li><strong>Você:</strong> ${mensagem}</li>
+        <li><strong>Bot:</strong> ${data.resposta_do_bot}</li>
+      `;
+              document.getElementById("mensagem").value = "";
+
+              // Role para a última mensagem
+              historicoMensagens.scrollTop = historicoMensagens.scrollHeight;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
