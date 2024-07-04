@@ -1,0 +1,18 @@
+# Ignorar arquivos e diretórios
+**/*.log
+temp/
+node_modules/
+dist/
+
+# Ignorar arquivos Docker
+Dockerfile
+.dockerignore
+
+# Ignorar arquivos Git
+.git
+.gitignore
+
+# Ignorar arquivos/diretórios python
+__pycache__/
+myenv/
+
