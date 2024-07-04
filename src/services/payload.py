@@ -1,12 +1,8 @@
 import requests
 import routes
-from utils.generate_id import session_id
 
 
-
-user_id = session_id()
-
-def send_message_to_dialogflow(mensagem, access_token):
+def send_message_to_dialogflow(mensagem, access_token, user_id):
     project_id = 'xadrezbot-vtdd' # variavel que amerzena o id do projeto
     url = f"https://dialogflow.googleapis.com/v2/projects/{project_id}/agent/sessions/{user_id}:detectIntent"
     headers = {
