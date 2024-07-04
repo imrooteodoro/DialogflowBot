@@ -1,0 +1,33 @@
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim-buster
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Add the current directory contents into the container at /app
+ADD . /app
+
+# Install curl, apt-transport-https and gnupg (needed to install gcloud)
+RUN apt-get update && apt-get install -y curl apt-transport-https gnupg
+
+# Add the Cloud SDK distribution URI as a package source
+RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+# Import the Google Cloud public key
+RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+
+# Update and install the Cloud SDK
+RUN apt-get update && apt-get install -y google-cloud-sdk
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the service account key file from the local directory to the container
+COPY auth.json /tmp/
+
+# Use the service account to authenticate the Google Cloud SDK
+# Make port 5000 available to the world outside this containedpr
+EXPOSE 5000
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
