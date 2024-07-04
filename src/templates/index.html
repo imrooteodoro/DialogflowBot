@@ -9,7 +9,14 @@
     <ul id="historico-de-mensagens">
       {% for mensagem in historico_de_mensagens %}
       <li><strong>Você:</strong> {{ mensagem.usuario }}</li>
+      {% if mensagem.bot_image %}
+      <li>
+        <strong>Bot:</strong>
+        <img src="{{ mensagem.bot_image }}" alt="thumbnail" width="100" height="100">
+      </li>
+      {% else %}
       <li><strong>Bot:</strong> {{ mensagem.bot }}</li>
+      {% endif %}
       {% endfor %}
     </ul>
     <form id="form-mensagem">
@@ -42,7 +49,11 @@
             .then((data) => {
               historicoMensagens.innerHTML += `
         <li><strong>Você:</strong> ${mensagem}</li>
-        <li><strong>Bot:</strong> ${data.resposta_do_bot}</li>
+        ${
+          data.resposta_do_bot.includes("<img")
+            ? `<li><strong>Bot:</strong> ${data.resposta_do_bot}</li>`
+            : `<li><strong>Bot:</strong> ${data.resposta_do_bot}</li>`
+        }
       `;
               document.getElementById("mensagem").value = "";
 
