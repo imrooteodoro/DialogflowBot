@@ -8,13 +8,7 @@
 ---
 
 ## Objetivo
-
-<div style="background-image: url('assets/bot.png');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  align-items: center;">
-
+![bot](assets/bot.png)
 <h3>O principal objetivo do ChessBot é interagir com o usuário dando dicas de como evoluir no jogo.</h3>
 
 <h3>Basedo nisto, pensei em um fluxo de conversa que não seja chato e ofereça um fluxo de conversa mais humanizado (dentro do possível).</h3>
