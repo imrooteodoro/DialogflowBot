@@ -11,7 +11,7 @@
 ![bot](assets/bot.png)
 <h3>O principal objetivo do ChessBot é interagir com o usuário dando dicas de como evoluir no jogo.</h3>
 
-<h3>Basedo nisto, pensei em um fluxo de conversa que não seja chato e ofereça uma conversa humanizada (dentro do possível).</h3>
+<h3>Baseado nisto, pensei em um fluxo de conversa que não seja chato e ofereça uma conversa humanizada (dentro do possível).</h3>
 
 
 </div>
