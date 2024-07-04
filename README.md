@@ -3,11 +3,12 @@
 ### O Dialogflow ChessBot é um projeto que usa os recursos do Dialogflow ES (Recurso Free oferecido pela Google Cloud) e sua API.  
 
 
-<a src="https://cloud.google.com/dialogflow/es/docs/quick/api?hl=pt-br#detect-intent-text-drest">Ler sobre a api</a>
+   <a src="https://cloud.google.com/dialogflow/es/docs/quick/api?hl=pt-br#detect-intent-text-drest">Sobre a API</a>
 
+---
 
 ## Objetivo
-----
+
 <div style="background-image: url('assets/bot.png');
   background-size: cover;
   background-position: center;
@@ -20,3 +21,17 @@
 
 
 </div>
+----
+
+## Requisitos
+
+## Diagramas
+
+## Tecnologias
+
+
+## Usar com o seu próprio Agente
+
+
+
+## Desenvolvedor
