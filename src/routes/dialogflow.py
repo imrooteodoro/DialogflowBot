@@ -26,6 +26,7 @@ def botpost(app):
             fulfillment_message = resultado["queryResult"]["fulfillmentMessages"][0]
             if "text" in fulfillment_message and "text" in fulfillment_message["text"]:
                 resposta_do_bot = fulfillment_message["text"]["text"][0]
+                resposta_do_bot = resposta_do_bot.replace('\n', '<br>')
                 urls = re.findall(r'(https?://\S+)', resposta_do_bot)
                 for url in urls:
                     link = f'<a href="{url}">{url}</a>'
