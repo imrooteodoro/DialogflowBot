@@ -30,7 +30,7 @@ def botpost(app):
                 resposta_do_bot = resposta_do_bot.replace('\n', '<br>')
                 urls = re.findall(r'(https?://\S+)', resposta_do_bot)
                 for url in urls:
-                    link = f'<a href="{url}">{url}</a>'
+                    link = f'<a href="{url}" target="_blank">{url}</a>'
                     resposta_do_bot = resposta_do_bot.replace(url, link)
                     historico_de_mensagens.append({"usuario": mensagem, "bot": resposta_do_bot})
 
