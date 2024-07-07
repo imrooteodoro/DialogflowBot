@@ -5,12 +5,13 @@ from utils.generate_id import session_id
 import re
 
 historico_de_mensagens = []
-user_id = session_id()  
+user_id = session_id()
 
 def botget(app):
     @app.route('/', methods=['GET'])
     def get_mensagem_do_bot():
-        user_id_get = session_id()  # Gera um único user_id para cada requisição get
+        global user_id
+        user_id = session_id()  # Gera um único user_id para cada requisição get
         global historico_de_mensagens
         return render_template('index.html', historico_de_mensagens=historico_de_mensagens)
 
@@ -20,8 +21,7 @@ def botpost(app):
         global historico_de_mensagens
         mensagem = request.json.get('mensagem')
         access_token = get_access_token()
-        resultado = send_message_to_dialogflow(mensagem, access_token, user_id)
-
+        resultado = send_message_to_dialogflow(mensagem, access_token,user_id)
         if "queryResult" in resultado and "fulfillmentMessages" in resultado["queryResult"]:
             fulfillment_message = resultado["queryResult"]["fulfillmentMessages"][0]
             if "text" in fulfillment_message and "text" in fulfillment_message["text"]:
@@ -41,3 +41,7 @@ def botpost(app):
             historico_de_mensagens.append({"usuario": mensagem, "bot": resposta_do_bot})
 
         return jsonify({'resposta_do_bot': resposta_do_bot})
+    
+
+
+    
