@@ -16,11 +16,15 @@
 > O fluxo de conversa do bot leva em conta o nível de cada usuário de acordo com a autoavaliação do próprio usuário, portanto, dependendo do que foi dito por ele no ínicio da conversa, o bot poderá recomendar conteúdos diferentes e ter uma linguagem mais técnica. 
 
 </div>
+---
 
-## Exemplo de Fallback
+## Exemplo de FALLBACK  
 
-https://github.com/imrooteodoro/DialogflowBot/assets/131160349/8bbad627-8158-494c-948b-49aad619afbe
 
+
+
+> [!NOTE]
+> Como visto no exemplo acima, qualquer assunto fora do contexto do bot levará o usuário à intent de Fallback e só irá voltar ao fluxo de conversa no momento que o usuário inserir algo que esteja no escopo de entendimento do bot.
 
 ## ♞ Requisitos
 
