@@ -27,7 +27,9 @@
 
 ## ♞ Requisitos
 
-## 🏛️ Diagramas
+## 🏛️ Arquitetura
+
+![Arquitetura](assets/arquitetura.svg)
 
 ## 🛠️ Tecnologias
 
