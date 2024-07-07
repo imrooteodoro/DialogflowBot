@@ -13,6 +13,7 @@ def botget(app):
         global user_id
         user_id = session_id()  # Gera um único user_id para cada requisição get
         global historico_de_mensagens
+        historico_de_mensagens.clear()
         return render_template('index.html', historico_de_mensagens=historico_de_mensagens)
 
 def botpost(app):
