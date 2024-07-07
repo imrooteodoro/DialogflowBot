@@ -1,4 +1,4 @@
-import uuid
+import hashlib
 
 def session_id():
-    return str(uuid.uuid4())[:8]
+    return str(hashlib.sha256())
