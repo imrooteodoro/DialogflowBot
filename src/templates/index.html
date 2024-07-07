@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Chatbot</title>
+    <script src="public/js/aux.js"></script>
     <link rel="stylesheet" href="public/styles/main.css" />
   </head>
   <body>
@@ -12,56 +13,20 @@
       {% if mensagem.bot_image %}
       <li>
         <strong>Bot:</strong>
-        <img src="{{ mensagem.bot_image }}" alt="thumbnail" width="100" height="100">
+        <img
+          src="{{ mensagem.bot_image }}"
+          alt="thumbnail"
+          width="100"
+          height="100"
+        />
       </li>
       {% else %}
       <li><strong>Bot:</strong> {{ mensagem.bot }}</li>
-      {% endif %}
-      {% endfor %}
+      {% endif %} {% endfor %}
     </ul>
     <form id="form-mensagem">
       <input type="text" id="mensagem" placeholder="Digite sua mensagem" />
       <button type="submit">Enviar</button>
     </form>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const historicoMensagens = document.getElementById(
-          "historico-de-mensagens"
-        );
-        historicoMensagens.scrollTop = historicoMensagens.scrollHeight;
-
-        const formMensagem = document.getElementById("form-mensagem");
-        formMensagem.addEventListener("submit", (event) => {
-          event.preventDefault();
-          const mensagem = document.getElementById("mensagem").value;
-
-          fetch("/dialogflow", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              mensagem: mensagem,
-            }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              historicoMensagens.innerHTML += `
-        <li><strong>Você:</strong> ${mensagem}</li>
-        ${
-          data.resposta_do_bot.includes("<img")
-            ? `<li><strong>Bot:</strong> ${data.resposta_do_bot}</li>`
-            : `<li><strong>Bot:</strong> ${data.resposta_do_bot}</li>`
-        }
-      `;
-              document.getElementById("mensagem").value = "";
-
-              // Role para a última mensagem
-              historicoMensagens.scrollTop = historicoMensagens.scrollHeight;
-            });
-        });
-      });
-    </script>
   </body>
 </html>
