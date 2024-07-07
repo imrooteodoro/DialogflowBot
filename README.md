@@ -17,6 +17,11 @@
 
 </div>
 
+## Exemplo de Fallback
+
+https://github.com/imrooteodoro/DialogflowBot/assets/131160349/8bbad627-8158-494c-948b-49aad619afbe
+
+
 ## ♞ Requisitos
 
 ## 🏛️ Diagramas
