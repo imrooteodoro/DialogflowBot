@@ -5,7 +5,7 @@ import requests
 
 def get_access_token():
     # Carrega as credenciais do arquivo JSON
-    service_path = '/home/teodoro/Documents/chatbots/src/ok.json'
+    service_path = '/home/teodoro/Documents/chatbots/DialogflowBot/src/ok.json'
     creds = service_account.Credentials.from_service_account_file(service_path,  
         scopes=['https://www.googleapis.com/auth/dialogflow']
     )
