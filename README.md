@@ -29,7 +29,7 @@
 
 ## 🏛️ Arquitetura
 
-![Arquitetura](assets/arquitetura.svg)
+![Arquitetura](assets/arquiteturachessbot.png)
 
 ## 🛠️ Tecnologias
 
