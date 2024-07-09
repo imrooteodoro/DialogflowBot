@@ -1,4 +1,4 @@
-from models.format_response import format_bot_response
+from models.messages.format_response import format_bot_response
 
 def extract_bot_response(resultado):
         if "queryResult" in resultado and "fulfillmentMessages" in resultado["queryResult"]:
