@@ -22,11 +22,14 @@ def botpost(app):
     @app.route('/dialogflow', methods=['POST'])
     def enviar_mensagem_para_dialogflow():
         global historico_de_mensagens
-        mensagem = request.json.get('mensagem')
-        access_token = get_access_token()
-        resultado = send_message_to_dialogflow(mensagem, access_token,user_id)
-        resposta_do_bot = extract_bot_response(resultado)
-        return jsonify({'resposta_do_bot': resposta_do_bot})
+        try:
+            mensagem = request.json.get('mensagem')
+            access_token = get_access_token()
+            resultado = send_message_to_dialogflow(mensagem, access_token,user_id)
+            resposta_do_bot = extract_bot_response(resultado)
+            return jsonify({'resposta_do_bot': resposta_do_bot})
+        except Exception as e:
+            return jsonify({'error': 'Internal Server Error:' + str(e)}), 500
     
 
 
