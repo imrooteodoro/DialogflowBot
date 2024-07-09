@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify, render_template
-from auth.auth import get_access_token
+from services.gcp_auth.auth import get_access_token
 from services.payload import send_message_to_dialogflow
 from utils.generate_id import session_id
-from models.bot_message import extract_bot_response
+from models.messages.bot_message import extract_bot_response
 
 import re
 
