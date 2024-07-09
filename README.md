@@ -1,6 +1,6 @@
-# ♚ DIALOGFLOW CHESSBOT
+# ♚ LASKERBOT
 
-### O Dialogflow ChessBot é um projeto que usa os recursos do Dialogflow ES (Recurso Free oferecido pela Google Cloud) e sua API.  
+### O  LASKERBOT é um projeto que usa os recursos das api's do DIALOGFLOW ES e LICHESS. O LASKERBOT dá dicas de como evoluir no Xadrez, além de analisar partidas com notações no formato PGN.  
 
 
 > [!NOTE]  
