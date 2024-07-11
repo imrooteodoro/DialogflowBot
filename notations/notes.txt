@@ -1,0 +1,2 @@
+chesscom game archive endpoint #GET : https://api.chess.com/pub/player/{username}/games/archives
+lichess game archive endpoint #GET : https://lichess.org/api/games/user/{username}
