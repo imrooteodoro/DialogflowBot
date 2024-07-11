@@ -1,0 +1,8 @@
+import chess_analisys
+from pystockfish import Engine
+
+
+
+TODO:
+
+# IMPLEMENTAR UM SERVICE PARA ANÁLISE DE PARTIDAS UTILIZANDO AS BIBLIOTECAS ``CHESS`` E ``PYSTOCKFISH``
