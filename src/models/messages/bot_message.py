@@ -8,9 +8,9 @@ def extract_bot_response(resultado):
                 resposta_do_bot = fulfillment_message["text"]["text"][0]
                 resposta_do_bot = format_bot_response(resposta_do_bot)
             else:
-                resposta_do_bot = "Sorry, I didn't understand that."
+                resposta_do_bot = "Desculpe, não consigo responder sua mensagem."
         else:
-            resposta_do_bot = "Sorry, I didn't understand that."
+            resposta_do_bot = "Desculpe, não consigo responder sua mensagem."
 
         return resposta_do_bot
 
