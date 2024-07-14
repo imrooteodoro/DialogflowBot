@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 import requests
 import subprocess
 from routes.dialogflow import botpost, botget
+from flask_cors import CORS
 
-app = Flask(__name__, static_folder='public')
+app = Flask(__name__)
+CORS(app)
 
 botpost(app)
 botget(app)
