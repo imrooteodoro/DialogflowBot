@@ -17,10 +17,13 @@
 
 </div>
 
+## Fluxo de conversa
+
+https://github.com/user-attachments/assets/fb02bbe5-f08f-40b9-a92c-8a48299dca1a
+
 ## Exemplo de FALLBACK  
 
-
- https://github.com/imrooteodoro/DialogflowBot/assets/131160349/8bbad627-8158-494c-948b-49aad619afbe
+https://github.com/user-attachments/assets/716d6625-2383-40b0-8dda-6ed75f4b2e57
 
 > [!NOTE]
 > Como visto no exemplo acima, qualquer assunto fora do contexto do bot levará o usuário à intent de Fallback e só irá voltar ao fluxo de conversa no momento que o usuário inserir algo que esteja no escopo de entendimento do bot.
