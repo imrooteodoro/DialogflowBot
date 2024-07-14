@@ -1,9 +1,8 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 from services.gcp_auth.auth import get_access_token
 from services.payload import send_message_to_dialogflow
 from utils.generate_id import session_id
 from models.messages.bot_message import extract_bot_response
-
 import re
 
 historico_de_mensagens = []
@@ -16,7 +15,7 @@ def botget(app):
         user_id = session_id()  # Gera um único user_id para cada requisição get
         global historico_de_mensagens
         historico_de_mensagens.clear()
-        return render_template('index.html', historico_de_mensagens=historico_de_mensagens)
+        return  "LaskerBot Is Live"
 
 def botpost(app):
     @app.route('/dialogflow', methods=['POST'])
