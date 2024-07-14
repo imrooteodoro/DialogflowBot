@@ -28,11 +28,15 @@ https://github.com/user-attachments/assets/716d6625-2383-40b0-8dda-6ed75f4b2e57
 > [!NOTE]
 > Como visto no exemplo acima, qualquer assunto fora do contexto do bot levará o usuário à intent de Fallback e só irá voltar ao fluxo de conversa no momento que o usuário inserir algo que esteja no escopo de entendimento do bot.
 
+## Frontend
+
+> [!NOTE]
+> O Frontend do LaskerBot está em desenvolvimento no repositório: https://github.com/imrooteodoro/laskerbot-frontend
+
 ## ♞ Requisitos
 
 ## 🏛️ Arquitetura
 
-![Arquitetura](assets/arquiteturachessbot.png)
 
 ## 🛠️ Tecnologias
 
