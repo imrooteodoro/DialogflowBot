@@ -17,6 +17,44 @@
 
 </div>
 
+## Endpoints
+<details><summary>Rota GET /</summary>
+
+- Resposta esperada:
+
+    ```json 
+        {
+
+         "LaskerBot is Live"
+
+        }
+    ``` 
+
+</details>
+
+----
+<details><summary>Rota POST /dialogflow</summary>
+
+- Modelo de requisição:
+
+    ```json 
+        {
+
+         "mensagem":"oi"
+
+        }
+    ``` 
+- Resposta esperada:
+
+    ```json 
+        {
+          "resposta_do_bot" : "Olá, enxadrista!♟️/nSeja bem-vindo! 
+           Eu sou o ChessBot./nE você, como se chama?♖♝♘♟️♕"
+        }
+    ``` 
+
+</details>
+
 ## Fluxo de conversa
 
 https://github.com/user-attachments/assets/fb02bbe5-f08f-40b9-a92c-8a48299dca1a
