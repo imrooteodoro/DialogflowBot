@@ -76,6 +76,9 @@ https://github.com/user-attachments/assets/716d6625-2383-40b0-8dda-6ed75f4b2e57
 ## 🏛️ Arquitetura
 
 
+[](assets/LaskerBot.svg)
+
+
 ## 🛠️ Tecnologias
 
 
