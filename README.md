@@ -81,6 +81,11 @@ https://github.com/user-attachments/assets/716d6625-2383-40b0-8dda-6ed75f4b2e57
 
 ## 🛠️ Tecnologias
 
+<div align="center">
+	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python"/></code>
+	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png" alt="Flask" title="Flask"/></code>
+	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183911547-990692bc-8411-4878-99a0-43506cdb69cf.png" alt="GCP" title="GCP"/></code>
+</div>
 
 ## 🤖 Usar com o seu próprio Agente
 
