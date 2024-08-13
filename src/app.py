@@ -1,6 +1,4 @@
-from flask import Flask, request, jsonify
-import requests
-import subprocess
+from flask import Flask
 from routes.dialogflow import botpost, botget
 from flask_cors import CORS
 
